@@ -2,6 +2,7 @@ package com.mizal.todoapp;
 
 import com.mizal.todoapp.datamodel.TodoItem;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TextArea;
@@ -20,6 +21,9 @@ public class Controller {
 
     @FXML
     private TextArea itemDetailsTextArea;
+
+    @FXML
+    private Label deadlineLabel;
 
     public void initialize() {
         TodoItem item1 = new TodoItem("Mail birthday card",
@@ -52,13 +56,15 @@ public class Controller {
     @FXML
     public void handleClickListView() {
         TodoItem item = todoListView.getSelectionModel().getSelectedItem();
+        itemDetailsTextArea.setText(item.getDetails());
+        deadlineLabel.setText(item.getDeadline().toString());
 //        System.out.println("The selected item is " + item);
-        StringBuilder sb = new StringBuilder();
-        sb.append(item.getDetails());
-        sb.append("\n\n\n\n");
-        sb.append("due: ");
-        sb.append(item.getDeadLine().toString());
-        itemDetailsTextArea.setText(sb.toString());
+//        StringBuilder sb = new StringBuilder();
+//        sb.append(item.getDetails());
+//        sb.append("\n\n\n\n");
+//        sb.append("due: ");
+//        sb.append(item.getDeadline().toString());
+//        itemDetailsTextArea.setText(sb.toString());
 
 
 
