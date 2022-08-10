@@ -11,19 +11,19 @@
             fx:controller="com.mizal.todoapp.Controller">
 
     <left>
-        <ListView fx:id="todoListView" onMouseClicked="#handleClickListView">
+        <ListView fx:id="todoListView">
 
         </ListView>
     </left>
     <center>
-        <VBox>
-            <TextArea fx:id="itemDetailsTextArea"/>
+        <VBox style="-fx-background-color:white">
+            <TextArea fx:id="itemDetailsTextArea" VBox.vgrow="ALWAYS"/>
             <HBox>
                 <padding>
                     <Insets left="4"/>
                 </padding>
-                <Label text="Due: "/>
-                <Label fx:id="deadlineLabel"/>
+                <Label text="Due: " style="-fx-background-color:white"/>
+                <Label fx:id="deadlineLabel" style="-fx-background-color:white"/>
             </HBox>
         </VBox>
     </center>
