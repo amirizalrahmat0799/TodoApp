@@ -1,7 +1,6 @@
 package com.mizal.todoapp.datamodel;
 
 import javafx.collections.FXCollections;
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -32,9 +31,9 @@ public class TodoData {
         return todoItems;
     }
 
-//    public void setTodoItems(List<TodoItem> todoItems) {
-//        this.todoItems = todoItems;
-//    }
+    public void addTodoItem(TodoItem item) {
+        todoItems.add(item);
+    }
 
     public void loadTodoItems() throws IOException {
         todoItems = FXCollections.observableArrayList();
@@ -82,4 +81,4 @@ public class TodoData {
             }
         }
     }
- }
+}
