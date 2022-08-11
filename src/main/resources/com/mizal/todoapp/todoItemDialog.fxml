@@ -11,21 +11,17 @@
             fx:controller="com.mizal.todoapp.DialogController"
             prefHeight="400.0" prefWidth="600.0">
 
-    <headerText>
-        We could you know
-    </headerText>
-
     <content>
         <GridPane vgap="10" hgap="10">
             <Label text="Short Description :" GridPane.rowIndex="0"
                    GridPane.columnIndex="0"/>
-            <TextField GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+            <TextField fx:id="shortDescriptionField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
             <Label text="Details" GridPane.rowIndex="1"
                    GridPane.columnIndex="0"/>
-            <TextArea GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            <TextArea fx:id="detailsArea" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
             <Label text="Deadline:" GridPane.rowIndex="2"
                    GridPane.columnIndex="0"/>
-            <DatePicker GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            <DatePicker fx:id="deadlinePicker" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
         </GridPane>
     </content>
 
